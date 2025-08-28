@@ -21,7 +21,7 @@ const Invitiation = () => {
             )}
             <div className="flex justify-center items-center mt-5">
                 <button 
-                    className="bg-[#f7c900] text-white text-center px-6 py-2 cursor-pointer"
+                    className="bg-[#C3AA92] text-white text-center px-6 py-2 cursor-pointer"
                     onClick={() => useInvitationStore.setState({seeInvitationPage: true})}
                 >
                     Ver Invitación

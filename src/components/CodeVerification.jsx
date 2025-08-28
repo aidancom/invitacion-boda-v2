@@ -41,7 +41,7 @@ const CodeVerification = () => {
                     
                 />
                 <button 
-                    className="cursor-pointer bg-[#f7c900] text-white mt-3 p-2 rounded disabled:opacity-50 disabled:pointer-events-none"
+                    className="cursor-pointer bg-[#C3AA92] text-white mt-3 p-2 rounded disabled:opacity-50 disabled:pointer-events-none"
                     disabled={!enableButton}
                 >
                     <div>

@@ -6,3 +6,17 @@
   font-weight: 400;
   font-style: normal;
 }
+
+@font-face {
+  font-family: 'Lodeh';
+  src: url('./assets/fonts/Lodeh/Lodeh-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'EdwardianScriptitc';
+  src: url('./assets/fonts/EdwardianScriptitc/EdwardianScriptitc-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
