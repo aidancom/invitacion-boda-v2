@@ -1,6 +1,7 @@
 export const backendStore = (set, get) => ({
     data: {},
     getGuestsData: async (data) => {
+        console.log(data)
         try {
             const consult = await fetch(`${import.meta.env.VITE_BACKEND_URL}/getGuestsData`, {
                 method: 'POST',
@@ -29,5 +30,37 @@ export const backendStore = (set, get) => ({
         }
 
         
+    },
+    updateGuestDB: async (next, guest) => {
+        set(() => ({
+            confirmLoader: true
+        }))
+        const data = {
+            'actual_guest': guest,
+            'update_guest': next,
+            'guest_code': get().data.guest_information.guest_id
+        }
+        try {
+
+            const req = await fetch(`${import.meta.env.VITE_BACKEND_URL}/updateGuest`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            })
+
+            const res = req.json()
+            get().getGuestsData({code: get().data.guest_information.guest_id});
+
+        } catch(error) {
+            console.log(error)
+        }
+        finally {
+            set(() => ({
+                confirmLoader: false
+            }))
+            get().getGuestsData({code: get().data.guest_information.guest_id});
+        }
     }
 })

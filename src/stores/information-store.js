@@ -1,3 +1,4 @@
 export const informationStore = (set, get) => ({
-    seeInvitationPage: false
+    seeInvitationPage: false,
+    confirmLoader: false
 })
