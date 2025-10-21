@@ -9,11 +9,11 @@ const Login = () => {
     return (
         <div>
             <div className="w-screen h-screen flex items-center justify-center bg-[url(../img/background-prev.png)] bg-no-repeat bg-cover">
-            <div className="bg-[#f7c90047] absolute w-full h-full shadow-[inset_0px_0px_150px_0px_#ffffff]"></div>
+            <div className="bg-[#0000001c] absolute w-full h-full"></div>
                 {!data.guest_information?.guest_id ? (
-                    <CodeVerification/>
+                  <CodeVerification/>
                 ) : (
-                    <Invitiation />
+                  <Invitiation />
                 )}
 
             </div>

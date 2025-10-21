@@ -2,8 +2,8 @@ const Head = () => {
   return (
     <div className="w-full pt-5 m-auto">
       <div className="flex justify-between border-b-1 border-double">
-        <p className="block w-[95%] border-t-1 py-2 pl-2">Viernes, 11 de Septiembre 2026</p>
-        <p className="border-t-1 py-2 pr-2">VLC</p>
+        <p className="block w-[95%] border-t-1 py-2 px-2">Viernes, 11 de Septiembre 2026</p>
+        <p className="border-t-1 py-2 px-2">VLC</p>
       </div>
       <div className="py-10 border-b-1">
         <h1 className="font-[Lodeh] text-center text-7xl xl:text-9xl px-2">The Wedding Times</h1>

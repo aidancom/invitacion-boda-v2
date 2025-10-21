@@ -5,6 +5,7 @@ import Introduction from '../components/InvitationPage/Introduction'
 import Location from '../components/InvitationPage/Location'
 import MoreInformation from '../components/InvitationPage/MoreInformation'
 import Slider from '../components/InvitationPage/Slider'
+import SuggestSongs from '../components/InvitationPage/SuggestSongs'
 
 const InvitationPage = () => {
 
@@ -17,6 +18,7 @@ const InvitationPage = () => {
             <Slider/>
             <MoreInformation/>
             <ConfirmAssist/>
+            <SuggestSongs/>
         </main>
     )
 }

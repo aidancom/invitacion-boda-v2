@@ -1,6 +1,6 @@
 from flask import Flask, request, jsonify
 from flask_cors import CORS
-from connection import column_guests
+from connection import column_guests, column_songs
 
 server = Flask(__name__)
 CORS(server)
@@ -10,20 +10,11 @@ def get_guests_data():
     data = request.get_json()
     code = data.get('code')
 
-    pipeline = [
-        {
-            "$match": {
-                "guest_id": code
-            }
-        },
-        {
-            "$project": {
-                "_id": 0 
-            }
-        }
-    ]
+    guest_information = column_guests.find_one(
+        {"guest_id": code}, 
+        {"_id": 0 }
+    )
 
-    guest_information = list(column_guests.aggregate(pipeline))
     return jsonify(guest_information)
 
 
@@ -40,7 +31,6 @@ def update_guest():
 
     nuevos_valores = {
         "$set": {
-            "guest_family_information.$.gluten": updated_guest["gluten"],
             "guest_family_information.$.confirm": updated_guest["confirm"],
             "guest_family_information.$.additional_information": updated_guest["additional_information"]
         }
@@ -52,6 +42,16 @@ def update_guest():
         return {"status": "ok", "message": "Invitado actualizado"}
     else:
         return {"status": "error", "message": "No se encontró el invitado"}
+
+
+@server.route('/sendSong', methods=['POST'])
+def send_song():
+    data = request.get_json()
+    insert = column_songs.insert_one(data)
+    if insert:
+        return jsonify({"status": "ok", "message": "Sugerencia recibida"})
+    else:
+        return jsonify({"status": "error", "message": "Ha ocurrido un error inesperado"})        
 
 if __name__ == '__main__':
     server.run(debug=True, port=5000)

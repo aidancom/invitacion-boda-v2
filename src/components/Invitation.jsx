@@ -12,7 +12,7 @@ const Invitiation = () => {
             </p>
             {data.guest_information?.guest_family_number ? (
                 <p className="text-center pt-5 text-xl">
-                    Nº de invitados: {data.guest_information?.guest_family_number + 1}
+                    Nº de invitados: {data.guest_information?.guest_family_number}
                 </p>
             ) : (
                 <p>

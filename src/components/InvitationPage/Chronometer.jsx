@@ -23,7 +23,7 @@ export default function Chronometer() {
   }
 
   const handleClick = () => {
-    const title = "Boda Aidan & Kathe";
+    const title = "Boda Aidan y Katherine";
     const location = "Betera";
     const start = "20260911T193000";
     const end   = "20260912T030000";
@@ -35,11 +35,9 @@ export default function Chronometer() {
   const {days, hours, minutes, seconds} = calcularTiempo(timeRemaining)
 
   return (
-    <div className="flex flex-col items-center p-6  bg-[#C3AA92]">
-      <p className="text-white mb-2">TE ESPERAMOS EL DÍA</p>
-      <h2 className="text-2xl font-semibold mb-6">11 de Septiembre</h2>
-
-      {/* Contador */}
+    <div className="flex flex-col items-center p-15  bg-[#C3AA92]">
+      <h2 className="text-4xl text-white font-semibold mb-6 font-[DancingScript]">11 de Septiembre</h2>
+      
       <div className="flex gap-4 text-center text-2xl font-bold">
         <div>
           <p>{days}</p>
