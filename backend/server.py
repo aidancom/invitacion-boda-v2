@@ -14,7 +14,7 @@ def get_guests_data():
         {"guest_id": code}, 
         {"_id": 0 }
     )
-
+    
     return jsonify(guest_information)
 
 

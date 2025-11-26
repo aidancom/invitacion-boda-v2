@@ -8,7 +8,7 @@ const Login = () => {
 
     return (
         <div>
-            <div className="w-screen h-screen flex items-center justify-center bg-[url(../img/background-prev.png)] bg-no-repeat bg-cover">
+            <div className="w-screen h-screen flex items-center justify-center bg-[url(../img/background-prev.png)] bg-no-repeat bg-cover bg-center">
             <div className="bg-[#0000001c] absolute w-full h-full"></div>
                 {!data.guest_information?.guest_id ? (
                   <CodeVerification/>

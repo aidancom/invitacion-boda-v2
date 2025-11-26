@@ -1,6 +1,12 @@
+import { toast } from "react-toastify"
+
 export const backendStore = (set, get) => ({
     data: {},
+    verificationLoader: false,
     getGuestsData: async (data) => {
+        set(() => ({
+            verificationLoader: true
+        }))
         try {
             const consult = await fetch(`${import.meta.env.VITE_BACKEND_URL}/getGuestsData`, {
                 method: 'POST',
@@ -11,6 +17,11 @@ export const backendStore = (set, get) => ({
             })
 
             const res = await consult.json()
+
+            if (!res) {
+                toast.error("Código incorrecto")
+                return
+            }
 
             const guest = {
                 'guest_id': res.guest_id,
@@ -25,10 +36,12 @@ export const backendStore = (set, get) => ({
             }))
 
         } catch(error) {
-            console.log(error)
+            toast.error("Algo ha salido mal")
+        } finally {
+            set(() => ({
+                verificationLoader: false
+            }))            
         }
-
-        
     },
     updateGuestDB: async (next, guest) => {
         set(() => ({

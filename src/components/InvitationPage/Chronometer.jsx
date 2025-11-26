@@ -35,32 +35,32 @@ export default function Chronometer() {
   const {days, hours, minutes, seconds} = calcularTiempo(timeRemaining)
 
   return (
-    <div className="flex flex-col items-center p-15  bg-[#C3AA92]">
+    <div className="flex flex-col items-center p-15 bg-[#4C5C37]">
       <h2 className="text-4xl text-white font-semibold mb-6 font-[DancingScript]">11 de Septiembre</h2>
       
       <div className="flex gap-4 text-center text-2xl font-bold">
         <div>
-          <p>{days}</p>
+          <p className="text-white">{days}</p>
           <span className="text-sm font-normal text-white">Días</span>
         </div>
-        <span>:</span>
+        <span className="text-white">:</span>
         <div>
-          <p>{String(hours).padStart(2, "0")}</p>
+          <p className="text-white">{String(hours).padStart(2, "0")}</p>
           <span className="text-sm font-normal text-white">Horas</span>
         </div>
-        <span>:</span>
+        <span className="text-white">:</span>
         <div>
-          <p>{String(minutes).padStart(2, "0")}</p>
+          <p className="text-white">{String(minutes).padStart(2, "0")}</p>
           <span className="text-sm font-normal text-white">Min</span>
         </div>
-        <span>:</span>
+        <span className="text-white">:</span>
         <div>
-          <p>{String(seconds).padStart(2, "0")}</p>
+          <p className="text-white">{String(seconds).padStart(2, "0")}</p>
           <span className="text-sm font-normal text-white">Seg</span>
         </div>
       </div>
       <button 
-        className="text-[#C3AA92] bg-white rounded-3xl font-semibold px-10 py-2 mt-5 cursor-pointer" 
+        className="text-[#4C5C37] bg-white rounded-3xl font-semibold px-10 py-2 mt-5 cursor-pointer" 
         onClick={handleClick}
         >Añadir a Google Calendar</button>
     </div>

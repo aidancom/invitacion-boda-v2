@@ -51,8 +51,8 @@ const ConfirmAssist = () => {
     <div className='bg-[url(../img/albufera.jpg)] bg-no-repeat bg-cover bg-fixed bg-center p-15 relative'>
       <div className="bg-[#00000042] w-full h-full absolute top-0 left-0"></div>
       <div className='max-w-[1200px] m-auto z-999 relative'>
-        <h3 className="text-4xl font-bold text-white text-center pb-3">Y ahora...<span className="font-[DancingScript]">¡lo importante de verdad!</span></h3>
-        <p className="text-white text-center">Necesitamos que {data.length == 1 ? 'confirmes' : 'confirmeis'} la asistencia (y un par de cosas mas jeje)</p>
+        <h3 className="text-4xl font-bold text-white text-center pb-3">Y ahora...<span className="font-[DancingScript]"> ¡lo importante de verdad!</span></h3>
+        <p className="text-white text-center">Necesitamos que {data.length == 1 ? 'confirmes' : 'confirmeis'} la asistencia (y alguna cosa más)</p>
         <div className="flex gap-10 justify-center pt-10 flex-col items-center lg:flex-row">
         {guests.map(guest => (
           <div key={guest.id || guest.name} className="bg-white flex-1 max-w-[300px] text-center px-6 py-3 relative rounded">
@@ -75,7 +75,7 @@ const ConfirmAssist = () => {
             )}
 
             <form className="space-y-3 py-3">
-              <p className="font-bold rounded bg-[#C3AA92] text-white py-1">{guest.name}</p>
+              <p className="font-bold rounded bg-[#4C5C37] text-white py-1">{guest.name}</p>
 
               <fieldset>
                 <label>¿Alguna alergia o intolerancia?</label>
@@ -94,7 +94,7 @@ const ConfirmAssist = () => {
               <div className="flex justify-between mt-4">
                 <button 
                   type="button" 
-                  className="bg-[#C3AA92] text-white px-3 cursor-pointer py-1 rounded"
+                  className="bg-[#4C5C37] text-white px-3 cursor-pointer py-1 rounded"
                   onClick={() => handleConfirm(guest)}
                   >Confirmar</button>
                 <button 
