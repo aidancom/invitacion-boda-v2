@@ -11,6 +11,10 @@ const InvitationPage = () => {
 
     return (
         <main>
+            <audio
+                src='../songs/song.mp3'
+                autoPlay={true}
+            />
             <Head/>
             <Introduction/>
             <Chronometer/>
