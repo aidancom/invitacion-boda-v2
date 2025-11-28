@@ -54,4 +54,4 @@ def send_song():
         return jsonify({"status": "error", "message": "Ha ocurrido un error inesperado"})        
 
 if __name__ == '__main__':
-    server.run(debug=True, port=5000)
+    server.run(debug=True, port=5000, host="0.0.0.0")
