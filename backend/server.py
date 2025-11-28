@@ -52,6 +52,11 @@ def send_song():
         return jsonify({"status": "ok", "message": "Sugerencia recibida"})
     else:
         return jsonify({"status": "error", "message": "Ha ocurrido un error inesperado"})        
+    
+    
+@server.route('/heathCheck')
+def health_check():
+    return jsonify({"result": "ok"})
 
 if __name__ == '__main__':
     server.run(debug=True, port=5000, host="0.0.0.0")
