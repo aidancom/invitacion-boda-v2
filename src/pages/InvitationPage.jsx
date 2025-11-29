@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react'
 import Chronometer from '../components/InvitationPage/Chronometer'
 import ConfirmAssist from '../components/InvitationPage/ConfirmAssist'
 import Head from '../components/InvitationPage/Head'
@@ -9,12 +10,31 @@ import SuggestSongs from '../components/InvitationPage/SuggestSongs'
 
 const InvitationPage = () => {
 
+const [audio, setAudio] = useState(false);
+
+    useEffect(() => {
+        setAudio(true);
+        const handleScroll = () => {
+            setAudio(true);
+            window.removeEventListener("scroll", handleScroll);
+        };
+
+        window.addEventListener("scroll", handleScroll);
+        
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+        };
+    }, []);
+
     return (
         <main>
-            <audio
-                src='../songs/song.mp3'
-                autoPlay={true}
-            />
+            {audio && (
+                <audio
+                    src='../songs/song.mp3'
+                    autoPlay={true}
+                />
+            )}
+
             <Head/>
             <Introduction/>
             <Chronometer/>
