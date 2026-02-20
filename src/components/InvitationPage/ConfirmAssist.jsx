@@ -22,28 +22,34 @@ const ConfirmAssist = () => {
   });
 
   const handleConfirm = (guest) => {
-    setUpdateGuest(prev => {
-      const next = {
-        ...prev,
-        name: guest.name,
-        confirm: "yes"
-      };
+    const next = {
+      name: guest.name,
+      confirm: "yes",
+      additional_information: updateGuest.additional_information
+    };
 
-      updateGuestDB(next, guest);
-      return next;
+    updateGuestDB(next, guest);
+
+    setUpdateGuest({
+      name: "",
+      confirm: null,
+      additional_information: ""
     });
   };
 
   const handleReject = (guest) => {
-    setUpdateGuest(prev => {
-      const next = {
-        ...prev,
-        name: guest.name,
-        confirm: "no"
-      };
-      
-      updateGuestDB(next, guest);
-      return next;
+    const next = {
+      name: guest.name,
+      confirm: "no",
+      additional_information: updateGuest.additional_information
+    };
+
+    updateGuestDB(next, guest);
+
+    setUpdateGuest({
+      name: "",
+      confirm: null,
+      additional_information: ""
     });
   };
 
