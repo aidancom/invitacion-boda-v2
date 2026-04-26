@@ -196,7 +196,7 @@
 }
 
 .heart-text {
-  transform: translateY(-95px);
+  transform: translateY(-90px);
   display: block;
   color: var(--heart-text);
   font-size: 1rem;
