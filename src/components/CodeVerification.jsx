@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 import { useForm } from "react-hook-form"
 import { useInvitationStore } from "../stores/useInvitationStore"
 import '../assets/css/loader_2.css'
+import { toast } from "react-toastify"
 
 const CodeVerification = () => {
 
@@ -10,7 +11,8 @@ const CodeVerification = () => {
     const codeComprobation = watch("code", "")
     const getGuestsData = useInvitationStore(state => state.getGuestsData)
     const verificationLoader = useInvitationStore(state => state.verificationLoader)
-
+    const url = new URLSearchParams(document.location.search)
+    const code = url.get("invCode")
 
     useEffect(() => {
         codeComprobation !== "" && codeComprobation !== null ? setEnableButton(true) : setEnableButton(false);
@@ -18,7 +20,7 @@ const CodeVerification = () => {
 
 
     const verifyCode = (data) => {
-        getGuestsData(data)
+        code == codeComprobation ? getGuestsData(data) : toast.error("Código incorrecto")
     }
 
     return (
