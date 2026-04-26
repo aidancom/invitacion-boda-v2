@@ -26,7 +26,7 @@ const Invitiation = () => {
                     }}
                     >
                 <div>
-                    <img src="../../public/img/sello.png" />
+                    <img src="../img/sello.png" />
                     <span class="heart-text">Haz click</span>
                 </div>
                 </button>
