@@ -13,7 +13,10 @@ const InvitationPage = () => {
 const [audio, setAudio] = useState(false);
 
     useEffect(() => {
-        setAudio(true);
+        setTimeout(() => {
+            console.log("hola")
+            setAudio(true)
+        }, 1000)
         const handleScroll = () => {
             setAudio(true);
             window.removeEventListener("scroll", handleScroll);
