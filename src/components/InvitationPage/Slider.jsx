@@ -29,7 +29,7 @@ const Slider = () => {
     <div className="relative overflow-hidden bg-[#4C5C37] p-15">
       <div className="max-w-[1200px] mx-auto text-center text-white">
         <h3 className="pb-5 text-4xl font-bold font-[DancingScript]">Nuestra historia</h3>
-        <div className="relative w-full h-[650px] overflow-hidden rounded-2xl">
+        <div className="relative w-full h-[400px] md:h-[700px] overflow-hidden rounded-2xl">
           <div
             className="flex transition-transform duration-700 ease-in-out"
             style={{ transform: `translateX(-${current * 100}%)` }}
@@ -39,7 +39,7 @@ const Slider = () => {
                 key={i}
                 src={src}
                 alt={`Slide ${i + 1}`}
-                className="w-full h-[700px] flex-shrink-0 object-cover"
+                className="w-full h-[400px] md:h-[700px] flex-shrink-0 object-cover"
               />
             ))}
           </div>
