@@ -13,9 +13,9 @@ const Invitiation = () => {
     return (
         <>
             <section className={`cssletter ${showCard ? "hidden" : "flex"}`}>
-            <div class={`envelope ${open ? "active" : ""}`}>
+            <div className={`envelope ${open ? "active" : ""}`}>
                 <button 
-                    class="heart" 
+                    className="heart" 
                     id="openEnvelope"
                     onClick={() => {
                         setOpen(true);
@@ -27,14 +27,14 @@ const Invitiation = () => {
                     >
                 <div>
                     <img src="../img/sello.png" />
-                    <span class="heart-text">Haz click</span>
+                    <span className="heart-text">Haz click</span>
                 </div>
                 </button>
-                <div class="envelope-flap"></div>
-                <div class="envelope-folds">
-                <div class="envelope-left"></div>
-                <div class="envelope-right"></div>
-                <div class="envelope-bottom"></div>
+                <div className="envelope-flap"></div>
+                <div className="envelope-folds">
+                <div className="envelope-left"></div>
+                <div className="envelope-right"></div>
+                <div className="envelope-bottom"></div>
                 </div>
             </div>
             </section>    

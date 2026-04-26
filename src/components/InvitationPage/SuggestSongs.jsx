@@ -10,7 +10,7 @@ const SuggestSongs = () => {
   const [response, setResponse] = useState(null)
 
   const styledLabel = 'text-white font-bold pb-2'
-  const styledInputs = 'bg-[#F9FAFB] px-1 py-1 rounded'
+  const styledInputs = 'bg-[#F9FAFB] px-1 py-1 rounded w-full'
 
   const submitSong = async (data) => {
     const song = await sendSong(data)

@@ -26,12 +26,6 @@
     --letter-y: calc(400px - 1rem - 10px);
   }
 }
-html {
-  font-size: 20px;
-}
-body {
-  background-color: darkred;
-}
 
 .cssletter {
   position: relative;
@@ -130,6 +124,10 @@ body {
 }
 
 .heart {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
   z-index: 4;
   position: relative;
   box-shadow: none;
@@ -146,6 +144,8 @@ body {
 .heart img {
   width: 150px;
 }
+
+
 
 @media (min-width: 650px) {
   .heart {
@@ -315,13 +315,9 @@ body {
   --bodybg: darkred;
 }
 
-footer {
-  position: fixed;
-  bottom: 1rem;
-  right: 1rem;
-  z-index: 10000000;
-}
-
-footer svg {
-  width: 100px;
+@media (max-width: 500px) {
+  .heart-text {
+    transform: translateY(-45px);
+    font-size: 0.6rem;
+  }
 }
