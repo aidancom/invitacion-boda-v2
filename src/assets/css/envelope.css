@@ -44,16 +44,13 @@
   z-index: 10;
 }
 
-.door {
+.doors {
   position: absolute;
-  top: 0;
+  inset: 0;
+  z-index: 10;
 
-  width: 50%;
-  height: 100%;
-
-  transition:
-    transform 1.8s cubic-bezier(.75,0,.25,1),
-    opacity 1.8s ease;
+  perspective: 2500px;
+  transform-style: preserve-3d;
 }
 
 .left {
@@ -73,9 +70,12 @@
 }
 
 .open .left {
-  transform:
-    rotateY(-80deg)
-    translateX(-20%);
+  transform: rotateY(-180deg);
+  opacity: 0;
+}
+
+.open .right {
+  transform: rotateY(180deg);
   opacity: 0;
 }
 
@@ -84,10 +84,18 @@
   transition: 1s;
 }
 
-.open .right {
-  transform:
-    rotateY(80deg)
-    translateX(20%);
-  opacity: 0;
-}
 
+.door {
+  position: absolute;
+  top: 0;
+
+  width: 50%;
+  height: 100%;
+
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+
+  transition:
+    transform 1.8s cubic-bezier(.75,0,.25,1),
+    opacity 1.8s ease;
+}

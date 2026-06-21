@@ -64,7 +64,7 @@ const InvitationPage = () => {
             >
                 <div className={`doors ${opened ? "open" : ""}`}>
                     <div className='seal'>
-                        <img src="../public/img/sello.png"></img>
+                        <img src="../img/sello.png"></img>
                     </div>
                     <div className="door left" />
                     <div className="door right" />
