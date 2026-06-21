@@ -7,16 +7,26 @@ import Location from '../components/InvitationPage/Location'
 import MoreInformation from '../components/InvitationPage/MoreInformation'
 import Slider from '../components/InvitationPage/Slider'
 import SuggestSongs from '../components/InvitationPage/SuggestSongs'
+import '../assets/css/envelope.css';
 
 const InvitationPage = () => {
 
-const [audio, setAudio] = useState(false);
+    const [audio, setAudio] = useState(false);
+    const [opened, setOpened] = useState(false);
+    const [fadeOut, setFadeOut] = useState(false);
 
-    useEffect(() => {
+    const handleOpen = () => {
+        setOpened(true);
+
         setTimeout(() => {
-            console.log("hola")
+            setFadeOut(true);
+        }, 1200);
+        setTimeout(() => {
             setAudio(true)
         }, 1000)
+    };
+    useEffect(() => {
+
         const handleScroll = () => {
             setAudio(true);
             window.removeEventListener("scroll", handleScroll);
@@ -37,7 +47,22 @@ const [audio, setAudio] = useState(false);
                     autoPlay={true}
                 />
             )}
+    <div
+      className={`envelope ${opened ? "open" : ""} ${
+        fadeOut ? "fade-out" : ""
+      }`}
+    >
+      <div className="triangle top" />
 
+      <button
+        className="seal"
+        onClick={handleOpen}
+      >
+        <img src='./img/sello.webp'/>
+      </button>
+
+      <div className="triangle bottom" />
+    </div>
             <Head/>
             <Introduction/>
             <Chronometer/>
