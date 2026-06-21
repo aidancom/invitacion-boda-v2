@@ -12,7 +12,7 @@ const Invitiation = () => {
                     <div
                     className="bg-white p-7 mx-5 z-999"
                     >
-                    <h1 className="font-[DancingScript] text-[35px] text-center">
+                    <h1 className="font-[Allura] text-[35px] text-center">
                         Hola, {data.guest_information?.guest_name}
                     </h1>
 

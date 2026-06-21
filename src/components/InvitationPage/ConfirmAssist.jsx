@@ -57,7 +57,7 @@ const ConfirmAssist = () => {
     <div className='bg-[url(../img/albufera.jpg)] bg-no-repeat bg-cover bg-fixed bg-center p-15 relative'>
       <div className="bg-[#00000042] w-full h-full absolute top-0 left-0"></div>
       <div className='max-w-[1200px] m-auto z-999 relative'>
-        <h3 className="text-4xl font-bold text-white text-center pb-3">Y ahora...<span className="font-[DancingScript]"> ¡lo importante de verdad!</span></h3>
+        <h3 className="text-4xl font-bold text-white text-center pb-3">Y ahora...<span className="font-[Allura]"> ¡lo importante de verdad!</span></h3>
         <p className="text-white text-center">Necesitamos que {data.length == 1 ? 'confirmes' : 'confirmeis'} la asistencia (y alguna cosa más)</p>
         <div className="flex gap-10 justify-center pt-10 flex-col items-center lg:flex-row">
         {guests.map(guest => (

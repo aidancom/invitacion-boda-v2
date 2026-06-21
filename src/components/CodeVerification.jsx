@@ -30,7 +30,7 @@ const CodeVerification = () => {
                     <div class="loader_2"></div>
                 </div>      
             }
-            <h1 className="font-[DancingScript] text-[35px] text-center">Hola</h1>
+            <h1 className="font-[Allura] text-[35px] text-center">Hola</h1>
             <p className="pt-2 pb-5">Para poder continuar, introduce debajo el código recibido por WhatsApp</p>
             <form 
                 className="flex flex-col"

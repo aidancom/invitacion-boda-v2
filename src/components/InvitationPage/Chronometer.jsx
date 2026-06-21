@@ -36,7 +36,7 @@ export default function Chronometer() {
 
   return (
     <div className="flex flex-col items-center p-15 bg-[#4C5C37]">
-      <h2 className="text-4xl text-white font-semibold mb-6 font-[DancingScript]">11 de Septiembre</h2>
+      <h2 className="text-4xl text-white font-semibold mb-6 font-[Allura]">11 de Septiembre</h2>
       
       <div className="flex gap-4 text-center text-2xl font-bold">
         <div>

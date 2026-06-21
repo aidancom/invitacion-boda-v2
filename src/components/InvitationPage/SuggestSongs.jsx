@@ -28,7 +28,7 @@ const SuggestSongs = () => {
       </div>      
       <div className='bg-no-repeat bg-cover bg-fixed bg-center p-15 relative'>
         <div className='max-w-[1200px] m-auto'>
-          <h3 className="text-4xl font-bold text-black text-center pb-5 font-[DancingScript]">¿Alguna sugerencia?</h3>
+          <h3 className="text-4xl font-bold text-black text-center pb-5 font-[Allura]">¿Alguna sugerencia?</h3>
           <p className="text-center">Estamos abiertos a sugerencias para poner canciones. Si tienes alguna en mente, ¡es tu momento!</p>
           <form 
             className="shadow-2xl rounded-[20px] max-w-[500px] m-auto p-5 space-y-4 mt-5 bg-[#4C5C37bf]"

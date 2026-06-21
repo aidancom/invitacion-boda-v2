@@ -1,114 +1,93 @@
-:root {
-  --paper-light: #d8b38a;
-  --paper-dark: #c89c72;
-  --seal: #a86d3c;
+.doors-overlay {
+    position: fixed;
+    inset: 0;
+
+    z-index: 9999;
+
+    overflow: hidden;
+
+    cursor: pointer;
+
+    background: white;
 }
-
-* {
-  box-sizing: border-box;
-}
-
-.envelope {
-  z-index: 9999;
-  position: fixed;
-  inset: 0;
-  width: 100vw;
-  height: 100vh;
-  overflow: hidden;
-  background: #f1e2cf;
-  transition: opacity 1.8s ease;
-}
-
-.envelope.fade-out {
-  opacity: 0;
-}
-
-/* -------------------- */
-/* TRIÁNGULO SUPERIOR   */
-/* -------------------- */
-
-.top {
-  position: absolute;
-  inset: 0;
-
-  background: #d5b28a;
-
-  clip-path: polygon(
-    0 0,
-    100% 0,
-    50% 75%
-  );
-
-  z-index: 3;
-
-  transition: transform 1.2s ease;
-}
-
-/* -------------------- */
-/* TRIÁNGULO INFERIOR   */
-/* -------------------- */
-
-.bottom {
-  position: absolute;
-  inset: 0;
-
-  background: #c79d73;
-
-  clip-path: polygon(
-    0 100%,
-    100% 100%,
-    50% 25%
-  );
-
-  z-index: 2;
-
-  transition: transform 1.2s ease;
-}
-
-/* -------------------- */
-/* SELLO                */
-/* -------------------- */
 
 .seal {
-  position: absolute;
-  left: 50%;
-  top: 75%;
-  transform: translate(-50%, -50%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 4;
-  border: none;
-  border-radius: 50%;
-  color: white;
-
-  cursor: pointer;
-
-  z-index: 10;
-
-  transition:
-    opacity .5s ease,
-    transform .5s ease;
+    z-index: 99999;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    transition: 1s;
 }
 .seal img {
-  width: 65%;
+  width: 10%;
+}
+/* CONTENIDO REAL */
 
+.invitation-content {
+  position: absolute;
+  inset: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: white;
 }
 
-/* -------------------- */
-/* ESTADO ABIERTO       */
-/* -------------------- */
+/* PUERTAS */
 
-.open .top {
-  transform: translateY(-100%);
+.doors {
+  position: absolute;
+  inset: 0;
+  z-index: 10;
 }
 
-.open .bottom {
-  transform: translateY(100%);
+.door {
+  position: absolute;
+  top: 0;
+
+  width: 50%;
+  height: 100%;
+
+  transition:
+    transform 1.8s cubic-bezier(.75,0,.25,1),
+    opacity 1.8s ease;
+}
+
+.left {
+  left: 0;
+  transform-origin: left center;
+  background-image: url("../../../public/img/masia.png");
+  background-size: 200% 100%;
+  background-position: left center;
+}
+
+.right {
+  right: 0;
+  transform-origin: right center;
+  background-image: url("../../../public/img/masia.png");
+  background-size: 200% 100%;
+  background-position: right center;
+}
+
+.open .left {
+  transform:
+    rotateY(-80deg)
+    translateX(-20%);
+  opacity: 0;
 }
 
 .open .seal {
   opacity: 0;
-  pointer-events: none;
+  transition: 1s;
+}
+
+.open .right {
+  transform:
+    rotateY(80deg)
+    translateX(20%);
+  opacity: 0;
 }
 
