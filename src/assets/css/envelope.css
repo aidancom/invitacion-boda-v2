@@ -57,16 +57,16 @@
   left: 0;
   transform-origin: left center;
   background-image: url("../../../public/img/masia.png");
-  background-size: 200% 100%;
-  background-position: left center;
+  background-size: max(100vw, calc(100vh * 1537 / 1023)) auto;
+  background-position: calc(50vw - max(50vw, calc(50vh * 1537 / 1023))) center;
 }
 
 .right {
   right: 0;
   transform-origin: right center;
   background-image: url("../../../public/img/masia.png");
-  background-size: 200% 100%;
-  background-position: right center;
+  background-size: max(100vw, calc(100vh * 1537 / 1023)) auto;
+  background-position: calc(-1 * max(50vw, calc(50vh * 1537 / 1023))) center;
 }
 
 .open .left {
