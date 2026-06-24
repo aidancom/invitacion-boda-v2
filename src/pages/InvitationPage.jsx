@@ -63,9 +63,6 @@ const InvitationPage = () => {
                 onClick={handleOpen}
             >
                 <div className={`doors ${opened ? "open" : ""}`}>
-                    <div className='seal'>
-                        <img src="../img/sello.png"></img>
-                    </div>
                     <div className="door left" />
                     <div className="door right" />
                 </div>
