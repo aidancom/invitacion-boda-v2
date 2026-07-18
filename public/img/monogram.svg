@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+viewBox="0 0 300 300">
+
+<ellipse
+cx="150"
+cy="150"
+rx="95"
+ry="120"
+fill="none"
+stroke="#9c9270"
+stroke-width="2"/>
+
+<ellipse
+cx="150"
+cy="150"
+rx="88"
+ry="113"
+fill="none"
+stroke="#9c9270"
+stroke-width="1"
+stroke-dasharray="3 4"/>
+
+</svg>

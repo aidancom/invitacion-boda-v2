@@ -22,11 +22,10 @@ const InvitationPage = () => {
             setHidden(true);
         }, 1200);
 
-        // Inicia el audio al hacer click
         setAudio(true);
     };
 
-    // Bloquea el scroll mientras las puertas están visibles
+
     useEffect(() => {
         if (!opened) {
             document.documentElement.style.overflow = 'hidden';
@@ -73,7 +72,6 @@ const InvitationPage = () => {
             <Chronometer />
             <Location />
             <Slider />
-            <MoreInformation />
             <ConfirmAssist />
             <SuggestSongs />
         </main>

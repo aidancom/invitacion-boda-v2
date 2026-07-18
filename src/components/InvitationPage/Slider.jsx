@@ -1,78 +1,205 @@
-import { Splide, SplideSlide } from '@splidejs/react-splide';
-import '@splidejs/react-splide/css';
-import { useEffect, useState } from 'react';
+const events = [
+    {
+        time: "19:16",
+        title: "CEREMONIA",
+        image: "../img/rings.png"
+    },
+    {
+        time: "19:46",
+        title: "CÓCTEL",
+        image: "../img/cocktail.png"
+    },
+    {
+        time: "21:15",
+        title: "CENA",
+        image: "../img/dinner.png"
+    },
+    {
+        time: "23:00",
+        title: "FIESTA",
+        image: "../img/party.png"
+    }
+];
 
 const Slider = () => {
 
-  const [current, setCurrent] = useState(0);
+    return (
 
+        <section className="bg-[#F8F5EE] py-24 px-6">
 
-  const images = [
-    "/img/slider/slide1.jpg",
-    "/img/slider/slide2.jpg",
-    "/img/slider/slide3.jpg",
-  ];
+            <div className="max-w-7xl mx-auto">
 
-  const length = images.length;
-  
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrent((prev) => (prev + 1) % length);
-    }, 4000);
-    return () => clearInterval(timer);
-  }, [length]);
+                {/* Divider */}
 
-  const nextSlide = () => setCurrent((prev) => (prev + 1) % length);
-  const prevSlide = () => setCurrent((prev) => (prev - 1 + length) % length);  
+                <div className="flex justify-center">
 
-  return (
-    <div className="relative overflow-hidden bg-[#4C5C37] p-15">
-      <div className="max-w-[1200px] mx-auto text-center text-white">
-        <div className="relative w-full h-[400px] md:h-[700px] overflow-hidden rounded-2xl">
-          <div
-            className="flex transition-transform duration-700 ease-in-out"
-            style={{ transform: `translateX(-${current * 100}%)` }}
-          >
-            {images.map((src, i) => (
-              <img
-                key={i}
-                src={src}
-                alt={`Slide ${i + 1}`}
-                className="w-full h-[400px] md:h-[700px] flex-shrink-0 object-cover"
-              />
-            ))}
-          </div>
+                    <img
+                        src="../img/timeline-divider.svg"
+                        className="w-60 md:w-80"
+                    />
 
-          {/* Botones */}
-          <button
-            onClick={prevSlide}
-            className="absolute top-1/2 left-4 -translate-y-1/2 bg-white/30 hover:bg-white/50 text-white p-2 rounded-full transition"
-          >
-            ‹
-          </button>
-          <button
-            onClick={nextSlide}
-            className="absolute top-1/2 right-4 -translate-y-1/2 bg-white/30 hover:bg-white/50 text-white p-2 rounded-full transition"
-          >
-            ›
-          </button>
-        </div>
+                </div>
 
-        {/* Indicadores */}
-        <div className="flex justify-center mt-4 space-x-2">
-          {images.map((_, i) => (
-            <button
-              key={i}
-              onClick={() => setCurrent(i)}
-              className={`w-3 h-3 rounded-full transition-all  ${
-                i === current ? "bg-white w-5" : "bg-white/50"
-              }`}
-            ></button>
-          ))}
-        </div>
-      </div>
-    </div>
-  );
+                {/* Título */}
+
+                <h2
+                    className="
+                        text-center
+
+                        mt-8
+
+                        text-[#6D694A]
+
+                        font-semibold
+                    "
+                    style={{
+                        fontFamily: "Cormorant Garamond",
+                        fontSize: "clamp(3rem,6vw,5rem)"
+                    }}
+                >
+                    EL GRAN DÍA
+                </h2>
+
+                {/* Timeline */}
+
+                <div className="mt-20 relative">
+
+                    {/* Línea */}
+
+                    <div
+                        className="
+                            hidden
+                            md:block
+
+                            absolute
+
+                            left-0
+                            right-0
+
+                            top-[245px]
+
+                            h-[2px]
+
+                            bg-[#8D8967]
+                        "
+                    />
+
+                    <div
+                        className="
+                            grid
+
+                            grid-cols-1
+
+                            md:grid-cols-4
+
+                            gap-20
+
+                            relative
+                        "
+                    >
+
+                        {events.map((item) => (
+
+                            <div
+                                key={item.title}
+                                className="
+                                    flex
+
+                                    flex-col
+
+                                    items-center
+
+                                    text-center
+
+                                    relative
+                                "
+                            >
+
+                                <img
+                                    src={item.image}
+                                    className="
+                                        w-44
+                                        md:w-52
+                                        lg:w-56
+
+                                        object-contain
+                                    "
+                                />
+
+                                <div
+                                    className="
+                                        hidden
+
+                                        md:block
+
+                                        w-5
+                                        h-5
+
+                                        rounded-full
+
+                                        bg-[#5C5B3B]
+
+                                        mt-10
+
+                                        z-10
+                                    "
+                                />
+
+                                <h3
+                                    className="
+                                        mt-6
+
+                                        text-[#5C5B3B]
+                                    "
+                                    style={{
+                                        fontFamily: "Cormorant Garamond",
+                                        fontSize: "clamp(2rem,3vw,3rem)"
+                                    }}
+                                >
+                                    {item.time}
+                                </h3>
+
+                                <p
+                                    className="
+                                        tracking-[0.12em]
+
+                                        mt-2
+
+                                        text-[#6D694A]
+                                    "
+                                    style={{
+                                        fontFamily: "Cormorant Garamond",
+                                        fontSize: "1.35rem"
+                                    }}
+                                >
+                                    {item.title}
+                                </p>
+
+                            </div>
+
+                        ))}
+
+                    </div>
+
+                </div>
+
+                {/* Divider */}
+
+                <div className="flex justify-center mt-24">
+
+                    <img
+                        src="../img/timeline-divider.svg"
+                        className="w-60 md:w-80"
+                    />
+
+                </div>
+
+            </div>
+
+        </section>
+
+    );
+
 }
 
-export default Slider
+export default Slider;

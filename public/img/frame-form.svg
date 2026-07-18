@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+viewBox="0 0 1200 1600"
+preserveAspectRatio="none">
+
+<rect
+x="18"
+y="18"
+width="1164"
+height="1564"
+fill="none"
+stroke="#A89E7A"
+stroke-width="1"/>
+
+<line x1="40" y1="30" x2="1160" y2="30" stroke="#A89E7A"/>
+<line x1="40" y1="1570" x2="1160" y2="1570" stroke="#A89E7A"/>
+
+<line x1="30" y1="40" x2="30" y2="1560" stroke="#A89E7A"/>
+<line x1="1170" y1="40" x2="1170" y2="1560" stroke="#A89E7A"/>
+
+<!-- esquinas -->
+
+<path d="M20 60 Q20 20 60 20" fill="none" stroke="#A89E7A"/>
+<path d="M1140 20 Q1180 20 1180 60" fill="none" stroke="#A89E7A"/>
+<path d="M20 1540 Q20 1580 60 1580" fill="none" stroke="#A89E7A"/>
+<path d="M1140 1580 Q1180 1580 1180 1540" fill="none" stroke="#A89E7A"/>
+
+</svg>

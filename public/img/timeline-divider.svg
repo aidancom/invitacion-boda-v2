@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+viewBox="0 0 340 50">
+
+<line
+x1="0"
+y1="25"
+x2="115"
+y2="25"
+stroke="#C59C33"
+stroke-width="2"/>
+
+<line
+x1="225"
+y1="25"
+x2="340"
+y2="25"
+stroke="#C59C33"
+stroke-width="2"/>
+
+<circle cx="8" cy="25" r="5" fill="#C59C33"/>
+<circle cx="332" cy="25" r="5" fill="#C59C33"/>
+
+<polygon
+points="115,25 123,20 131,25 123,30"
+fill="#C59C33"/>
+
+<polygon
+points="225,25 217,20 209,25 217,30"
+fill="#C59C33"/>
+
+<g
+transform="translate(170 25)"
+stroke="#C59C33"
+fill="none"
+stroke-width="2">
+
+<circle r="11"/>
+
+<path d="M0-11L0 11"/>
+
+<path d="M-11 0L11 0"/>
+
+<path d="M-8-8L8 8"/>
+
+<path d="M8-8L-8 8"/>
+
+</g>
+
+</svg>

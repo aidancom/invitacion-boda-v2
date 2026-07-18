@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+viewBox="0 0 320 40">
+
+<line
+x1="0"
+y1="20"
+x2="120"
+y2="20"
+stroke="#8E8A67"
+stroke-width="1.5"/>
+
+<line
+x1="200"
+y1="20"
+x2="320"
+y2="20"
+stroke="#8E8A67"
+stroke-width="1.5"/>
+
+<circle
+cx="160"
+cy="20"
+r="10"
+fill="none"
+stroke="#8E8A67"
+stroke-width="1.2"/>
+
+<path
+d="M160 10 L160 30
+M150 20 L170 20
+M153 13 L167 27
+M167 13 L153 27"
+stroke="#8E8A67"
+stroke-width="1.2"/>
+
+<circle cx="135" cy="20" r="2" fill="#8E8A67"/>
+<circle cx="185" cy="20" r="2" fill="#8E8A67"/>
+
+</svg>

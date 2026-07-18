@@ -19,93 +19,283 @@ const SuggestSongs = () => {
   }
 
   return (
-    <div className="relative">
-      <div className="absolute left-0 top-0 rotate-x-180">
+    <section className="relative bg-[#F8F5EE] py-24 px-6 overflow-hidden">
+
+        {/* Marco */}
+
         <img
-          src="../img/flowers-corner.png"
-          className="w-[150px] lg:w-[300px] m-[10px]"
+            src="../img/frame-form.svg"
+            className="absolute inset-0 w-full h-full pointer-events-none"
         />
-      </div>      
-      <div className='bg-no-repeat bg-cover bg-fixed bg-center p-15 relative'>
-        <div className='max-w-[1200px] m-auto'>
-          <h3 className="text-4xl font-bold text-black text-center pb-5 font-[Allura]">¿Alguna sugerencia?</h3>
-          <p className="text-center">Estamos abiertos a sugerencias para poner canciones. Si tienes alguna en mente, ¡es tu momento!</p>
-          <form 
-            className="shadow-2xl rounded-[20px] max-w-[500px] m-auto p-5 space-y-4 mt-5 bg-[#4C5C37bf]"
-            onSubmit={handleSubmit((data) => submitSong(data))}
-            >
-            <fieldset className="flex flex-col">
-              <label className={styledLabel}>
-                Nombre de la cancion*
-              </label>
-              <input 
-                type="text"
-                name="songName"
-                placeholder="Introduce el nombre de la canción"
-                className={styledInputs}
-                {...register('songName', {
-                  required: {
-                    value: true,
-                    message: 'Este campo es obligatorio'
-                  }
-                })}
-              />
-              {errors?.songName?.message && <p>{errors?.songName?.message}</p>}            
-            </fieldset>
-            <fieldset className="flex flex-col">
-              <label className={styledLabel}>
-                Artista*
-              </label>
-              <input 
-                type="text"
-                name="artistName"
-                placeholder="Introduce el artista de la canción"              
-                className={styledInputs}
-                {...register('artistName', {
-                  required: {
-                    value: true,
-                    message: 'Este campo es obligatorio'
-                  }
-                })}              
-              />
-              {errors?.artistName?.message && <p>{errors?.artistName?.message}</p>}
-            </fieldset>
-            <fieldset className="flex flex-col">
-              <label className={styledLabel}>
-                Album
-              </label>
-              <input 
-                type="text"
-                name="albumName"
-                placeholder="Introduce el albúm de la canción (si lo sabes)"               
-                className={styledInputs} 
-                {...register('albumName', {
-                  required: {
-                    value: false,
-                  }
-                })}                         
-              />
-            </fieldset>
-            <div className="flex justify-end">
-              <input 
-                type="submit" 
-                value="Enviar" 
-                className="bg-[#4C5C37] text-white px-3 cursor-pointer p-1"
+
+        <div className="relative z-10 max-w-3xl mx-auto">
+
+            {/* Divider */}
+
+            <div className="flex justify-center">
+
+                <img
+                    src="../img/form-divider.svg"
+                    className="w-28"
                 />
+
             </div>
 
-          </form>
-        </div>
-      </div>
-      <div className="absolute right-0 bottom-0 rotate-y-180">
-        <img
-          src="../img/flowers-corner.png"
-          className="w-[150px] lg:w-[300px] m-[10px]"
-        />
-      </div>        
-    </div>
+            {/* Título */}
 
-  )
+            <h2
+                className="
+                    mt-8
+                    text-center
+                    tracking-[0.18em]
+                    text-[#5E5945]
+                "
+                style={{
+                    fontFamily:"Cormorant Garamond",
+                    fontSize:"clamp(2.2rem,5vw,3.6rem)"
+                }}
+            >
+                NUESTRA BANDA SONORA
+            </h2>
+
+            <div className="flex justify-center mt-6">
+
+                <img
+                    src="../img/form-divider-small.svg"
+                    className="w-20"
+                />
+
+            </div>
+
+            <div
+                className="
+                    mt-10
+
+                    text-center
+
+                    text-[#5F5A44]
+
+                    leading-8
+
+                    px-4
+                "
+                style={{
+                    fontFamily:"Cormorant Garamond",
+                    fontSize:"1.35rem"
+                }}
+            >
+
+                <p>
+                    No queremos arriesgarnos a que suene
+                    esa canción que nadie pide nunca
+                    <br />
+                    (y que todos sufren en silencio).
+                </p>
+
+                <p className="mt-8">
+                    Ayúdanos a crear la banda sonora
+                    <br />
+                    de un día que será inolvidable:
+                </p>
+
+                <p
+                    className="mt-8 text-3xl"
+                    style={{fontFamily:"Allura"}}
+                >
+                    buena compañía, buena comida y buena música...
+                </p>
+
+                <p
+                    className="
+                        mt-8
+                        tracking-[0.18em]
+                        uppercase
+                    "
+                >
+                    ¡Prometemos bailarlas todas!
+                </p>
+
+            </div>
+
+            <form
+                onSubmit={handleSubmit((data)=>submitSong(data))}
+                className="
+                    mt-14
+
+                    max-w-xl
+
+                    mx-auto
+
+                    space-y-8
+                "
+            >
+
+                <fieldset>
+
+                    <label className="block mb-2 tracking-[0.12em] text-[#5F5A44] uppercase text-sm">
+
+                        Nombre de la canción *
+
+                    </label>
+
+                    <input
+
+                        className="
+                            w-full
+
+                            border
+
+                            border-[#C9C0B2]
+
+                            bg-transparent
+
+                            px-4
+
+                            py-3
+
+                            outline-none
+
+                            focus:border-[#9A8E66]
+                        "
+
+                        placeholder="Esa canción que nunca falla"
+
+                        {...register("songName",{
+
+                            required:"Este campo es obligatorio"
+
+                        })}
+
+                    />
+
+                    {errors.songName && (
+                        <p className="text-red-600 mt-2 text-sm">
+                            {errors.songName.message}
+                        </p>
+                    )}
+
+                </fieldset>
+
+                <fieldset>
+
+                    <label className="block mb-2 tracking-[0.12em] text-[#5F5A44] uppercase text-sm">
+
+                        Artista *
+
+                    </label>
+
+                    <input
+
+                        className="
+                            w-full
+
+                            border
+
+                            border-[#C9C0B2]
+
+                            bg-transparent
+
+                            px-4
+
+                            py-3
+
+                            outline-none
+
+                            focus:border-[#9A8E66]
+                        "
+
+                        placeholder="El genio detrás de la canción"
+
+                        {...register("artistName",{
+
+                            required:"Este campo es obligatorio"
+
+                        })}
+
+                    />
+
+                    {errors.artistName && (
+                        <p className="text-red-600 mt-2 text-sm">
+                            {errors.artistName.message}
+                        </p>
+                    )}
+
+                </fieldset>
+
+                <fieldset>
+
+                    <label className="block mb-2 tracking-[0.12em] text-[#5F5A44] uppercase text-sm">
+
+                        Álbum (opcional)
+
+                    </label>
+
+                    <input
+
+                        className="
+                            w-full
+
+                            border
+
+                            border-[#C9C0B2]
+
+                            bg-transparent
+
+                            px-4
+
+                            py-3
+
+                            outline-none
+
+                            focus:border-[#9A8E66]
+                        "
+
+                        placeholder="Si aplica, el álbum donde encontrarla"
+
+                        {...register("albumName")}
+
+                    />
+
+                </fieldset>
+
+                <div className="flex justify-center pt-6">
+
+                    <button
+
+                        type="submit"
+
+                        className="
+                            bg-[#A7A078]
+
+                            hover:bg-[#938B64]
+
+                            transition
+
+                            text-white
+
+                            uppercase
+
+                            tracking-[0.25em]
+
+                            px-14
+
+                            py-4
+                        "
+
+                    >
+
+                        ENVIAR
+
+                    </button>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </section>
+  );
 }
 
 export default SuggestSongs

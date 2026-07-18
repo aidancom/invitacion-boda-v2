@@ -2,67 +2,191 @@ import { useState, useEffect } from "react";
 
 export default function Chronometer() {
   const weddingDay = new Date("2026-09-11T00:00:00").getTime();
-  const [timeRemaining, setTimeRemaining] = useState(weddingDay - Date.now())
+
+  const [timeRemaining, setTimeRemaining] = useState(
+    weddingDay - Date.now()
+  );
 
   useEffect(() => {
-    setInterval(() => setTimeRemaining(weddingDay - Date.now()), 1000)
-  }, [weddingDay])
+    const interval = setInterval(() => {
+      setTimeRemaining(weddingDay - Date.now());
+    }, 1000);
+
+    return () => clearInterval(interval);
+  }, [weddingDay]);
 
   const calcularTiempo = (timeRemaining) => {
-    const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24))
-    const hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))
-    const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60))
-    const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000)
-    
+    const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
+    const hours = Math.floor(
+      (timeRemaining % (1000 * 60 * 60 * 24)) /
+      (1000 * 60 * 60)
+    );
+    const minutes = Math.floor(
+      (timeRemaining % (1000 * 60 * 60)) /
+      (1000 * 60)
+    );
+    const seconds = Math.floor(
+      (timeRemaining % (1000 * 60)) /
+      1000
+    );
+
     return {
       days,
       hours,
       minutes,
-      seconds
-    }
-  }
+      seconds,
+    };
+  };
 
   const handleClick = () => {
     const title = "Boda Aidan y Katherine";
     const location = "Betera";
     const start = "20260911T193000";
-    const end   = "20260912T030000";
+    const end = "20260912T030000";
 
-    const url = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${title}&dates=${start}/${end}&location=${location}&sf=true&output=xml`;
+    const url =
+      `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${title}&dates=${start}/${end}&location=${location}&sf=true&output=xml`;
+
     window.open(url, "_blank", "noopener,noreferrer");
   };
 
-  const {days, hours, minutes, seconds} = calcularTiempo(timeRemaining)
+  const { days, hours, minutes, seconds } =
+    calcularTiempo(timeRemaining);
 
   return (
-    <div className="flex flex-col items-center p-15 bg-[#4C5C37]">
-      <h2 className="text-4xl text-white font-semibold mb-6 font-[Allura]">11 de Septiembre</h2>
-      
-      <div className="flex gap-4 text-center text-2xl font-bold">
-        <div>
-          <p className="text-white">{days}</p>
-          <span className="text-sm font-normal text-white">Días</span>
+    <section className="bg-[#F8F5EE] py-20 px-6">
+
+      <div className="max-w-5xl mx-auto text-center">
+
+        {/* Fecha */}
+
+        <h2
+          className="
+            text-[#6E6A4D]
+            leading-none
+            font-light
+          "
+          style={{
+            fontFamily: "Cormorant Garamond",
+            fontSize: "clamp(3.5rem,9vw,8rem)"
+          }}
+        >
+          11 de Septiembre
+        </h2>
+
+        {/* Año */}
+
+        <p
+          className="
+            mt-4
+            tracking-[0.5em]
+            uppercase
+            text-[#6E6A4D]
+          "
+          style={{
+            fontFamily: "Cormorant Garamond",
+            fontSize: "clamp(1rem,2vw,1.6rem)"
+          }}
+        >
+          de 2026
+        </p>
+
+        {/* Adorno */}
+
+        <div className="flex justify-center mt-8">
+          <img
+            src="../img/divider-countdown.svg"
+            alt=""
+            className="w-52 md:w-72"
+          />
         </div>
-        <span className="text-white">:</span>
-        <div>
-          <p className="text-white">{String(hours).padStart(2, "0")}</p>
-          <span className="text-sm font-normal text-white">Horas</span>
+
+        {/* Contador */}
+
+        <div
+          className="
+            mt-12
+
+            grid
+            grid-cols-2
+            md:grid-cols-4
+
+            gap-y-10
+            md:gap-x-14
+
+            text-[#6E6A4D]
+          "
+        >
+
+          <TimeBlock value={days} label="DÍAS" />
+          <TimeBlock value={hours} label="HORAS" />
+          <TimeBlock value={minutes} label="MINUTOS" />
+          <TimeBlock value={seconds} label="SEGUNDOS" />
+
         </div>
-        <span className="text-white">:</span>
-        <div>
-          <p className="text-white">{String(minutes).padStart(2, "0")}</p>
-          <span className="text-sm font-normal text-white">Min</span>
-        </div>
-        <span className="text-white">:</span>
-        <div>
-          <p className="text-white">{String(seconds).padStart(2, "0")}</p>
-          <span className="text-sm font-normal text-white">Seg</span>
-        </div>
+
+        {/* Botón */}
+
+        <button
+          onClick={handleClick}
+          className="
+            mt-14
+
+            border
+            border-[#8E8A67]
+
+            px-8
+            py-3
+
+            tracking-[0.15em]
+            uppercase
+
+            text-[#6E6A4D]
+
+            hover:bg-[#EDE8DB]
+
+            transition
+            duration-300
+
+            cursor-pointer
+          "
+          style={{
+            fontFamily: "Cormorant Garamond"
+          }}
+        >
+          Añadir al calendario
+        </button>
+
       </div>
-      <button 
-        className="text-[#4C5C37] bg-white rounded-3xl font-semibold px-10 py-2 mt-5 cursor-pointer" 
-        onClick={handleClick}
-        >Añadir a Google Calendar</button>
+
+    </section>
+  );
+}
+
+function TimeBlock({ value, label }) {
+  return (
+    <div className="flex flex-col items-center">
+
+      <span
+        style={{
+          fontFamily: "Cormorant Garamond",
+          fontSize: "clamp(2.8rem,6vw,4.5rem)"
+        }}
+      >
+        {String(value).padStart(2, "0")}
+      </span>
+
+      <span
+        className="
+          mt-2
+          tracking-[0.25em]
+          text-xs
+          md:text-sm
+        "
+      >
+        {label}
+      </span>
+
     </div>
   );
 }

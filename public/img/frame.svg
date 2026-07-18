@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 1000 1800"
+     preserveAspectRatio="none">
+
+    <defs>
+
+        <style>
+
+            .line{
+                fill:none;
+                stroke:#9c9270;
+                stroke-width:2;
+            }
+
+            .thin{
+                fill:none;
+                stroke:#9c9270;
+                stroke-width:1;
+            }
+
+            .dot{
+                fill:#9c9270;
+            }
+
+        </style>
+
+    </defs>
+
+    <!-- Marco -->
+
+    <rect
+        x="35"
+        y="35"
+        width="930"
+        height="1730"
+        class="line"
+        rx="3"/>
+
+    <!-- Esquinas -->
+
+    <!-- TL -->
+
+    <path class="thin"
+        d="
+        M35 80
+        C35 50 50 35 80 35
+
+        M50 65
+        C50 45 65 45 65 65
+
+        M35 120
+        C35 95 50 90 70 90
+        "/>
+
+    <circle cx="63" cy="63" r="2" class="dot"/>
+
+    <!-- TR -->
+
+    <path class="thin"
+        d="
+        M965 80
+        C965 50 950 35 920 35
+
+        M950 65
+        C950 45 935 45 935 65
+
+        M965 120
+        C965 95 950 90 930 90
+        "/>
+
+    <circle cx="937" cy="63" r="2" class="dot"/>
+
+    <!-- BL -->
+
+    <path class="thin"
+        d="
+        M35 1720
+        C35 1750 50 1765 80 1765
+
+        M50 1735
+        C50 1755 65 1755 65 1735
+
+        M35 1680
+        C35 1705 50 1710 70 1710
+        "/>
+
+    <circle cx="63" cy="1737" r="2" class="dot"/>
+
+    <!-- BR -->
+
+    <path class="thin"
+        d="
+        M965 1720
+        C965 1750 950 1765 920 1765
+
+        M950 1735
+        C950 1755 935 1755 935 1735
+
+        M965 1680
+        C965 1705 950 1710 930 1710
+        "/>
+
+    <circle cx="937" cy="1737" r="2" class="dot"/>
+
+</svg>

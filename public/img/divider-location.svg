@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+viewBox="0 0 260 40">
+
+<line
+x1="0"
+y1="20"
+x2="95"
+y2="20"
+stroke="#A59E78"
+stroke-width="1.4"/>
+
+<line
+x1="165"
+y1="20"
+x2="260"
+y2="20"
+stroke="#A59E78"
+stroke-width="1.4"/>
+
+<polygon
+points="130,13 137,20 130,27 123,20"
+fill="#A59E78"/>
+
+<circle
+cx="116"
+cy="20"
+r="2.5"
+fill="#A59E78"/>
+
+<circle
+cx="144"
+cy="20"
+r="2.5"
+fill="#A59E78"/>
+
+</svg>

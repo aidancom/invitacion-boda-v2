@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+viewBox="0 0 1200 600"
+preserveAspectRatio="none">
+
+<style>
+
+.line{
+stroke:#A59E78;
+stroke-width:1.5;
+fill:none;
+}
+
+</style>
+
+<!-- Superior -->
+
+<line class="line" x1="60" y1="70" x2="270" y2="70"/>
+
+<line class="line" x1="930" y1="70" x2="1140" y2="70"/>
+
+<!-- Inferior -->
+
+<line class="line" x1="60" y1="530" x2="270" y2="530"/>
+
+<line class="line" x1="930" y1="530" x2="1140" y2="530"/>
+
+<!-- Verticales -->
+
+<line class="line" x1="40" y1="90" x2="40" y2="510"/>
+
+<line class="line" x1="1160" y1="90" x2="1160" y2="510"/>
+
+<!-- Curvas -->
+
+<path class="line"
+d="M40 90
+Q40 70 60 70"/>
+
+<path class="line"
+d="M1160 90
+Q1160 70 1140 70"/>
+
+<path class="line"
+d="M40 510
+Q40 530 60 530"/>
+
+<path class="line"
+d="M1160 510
+Q1160 530 1140 530"/>
+
+</svg>
