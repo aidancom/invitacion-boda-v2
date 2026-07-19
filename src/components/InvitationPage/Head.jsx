@@ -7,7 +7,7 @@ const Head = () => {
       {/* Decoración floral superior izquierda */}
 {/* Decoración floral superior izquierda */}
 <img
-  src="../img/branch-left-top.png"
+  src="../img/branch-left-top.webp"
   alt=""
   aria-hidden="true"
   className="
@@ -29,7 +29,7 @@ const Head = () => {
       <div className="relative z-10 flex flex-col items-center px-7 pt-12 pb-6 sm:pt-16">
         {/* Logo */}
         <img
-          src="../img/logo.png"
+          src="../img/logo.webp"
           alt="Logo de Katherine y Aidan"
           className="w-[72px] sm:w-[95px] h-auto"
         />
@@ -93,13 +93,13 @@ const Head = () => {
         {/* Masía + sello superpuesto */}
         <div className="relative mt-5 w-[105%] max-w-[520px]">
           <img
-            src="../img/masia-introduction.png"
+            src="../img/masia-introduction.webp"
             alt="Masía de Sant Antoni"
             className="w-full h-auto object-contain"
           />
 
           <img
-            src="../img/sello.png"
+            src="../img/sello.webp"
             alt="Sello de la invitación"
             className="
               absolute

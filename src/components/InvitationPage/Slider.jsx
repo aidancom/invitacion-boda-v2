@@ -2,22 +2,22 @@ const events = [
     {
         time: "19:16",
         title: "CEREMONIA",
-        image: "../img/rings.png"
+        image: "../img/rings.webp"
     },
     {
         time: "19:46",
         title: "CÓCTEL",
-        image: "../img/cocktail.png"
+        image: "../img/cocktail.webp"
     },
     {
         time: "21:15",
         title: "CENA",
-        image: "../img/dinner.png"
+        image: "../img/dinner.webp"
     },
     {
         time: "23:00",
         title: "FIESTA",
-        image: "../img/party.png"
+        image: "../img/party.webp"
     }
 ];
 

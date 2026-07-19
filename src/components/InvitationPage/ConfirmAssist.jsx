@@ -157,7 +157,7 @@ return (
 
    {/* Rama superior derecha */}
 <img
-  src="../img/branch-top-confirm.png"
+  src="../img/branch-top-confirm.webp"
   alt=""
   aria-hidden="true"
   className="
@@ -178,7 +178,7 @@ return (
 
 {/* Rama inferior izquierda */}
 <img
-  src="../img/branch-top-confirm.png"
+  src="../img/branch-top-confirm.webp"
   alt=""
   aria-hidden="true"
   className="
