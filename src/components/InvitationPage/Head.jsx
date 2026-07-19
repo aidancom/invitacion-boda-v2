@@ -1,161 +1,208 @@
 const Head = () => {
   return (
-    <section className="relative w-full min-h-screen bg-[#fdfaf5] overflow-hidden -z-10">
+    <section className="relative w-full min-h-screen bg-[#f8f4ec] overflow-hidden -z-10">
+      {/* Marco exterior */}
+      <div className="absolute inset-[10px] sm:inset-4 border border-[#9d9775] pointer-events-none z-20" />
 
-      {/* Marco */}
-      <div className="absolute inset-5 border border-[#9c9270] rounded-sm pointer-events-none"></div>
+      {/* Esquinas decorativas del marco */}
+      <span className="absolute top-[7px] left-[7px] z-20 text-[#9d9775] text-xl leading-none">
+        ❧
+      </span>
+      <span className="absolute top-[7px] right-[7px] z-20 text-[#9d9775] text-xl leading-none scale-x-[-1]">
+        ❧
+      </span>
+      <span className="absolute bottom-[7px] left-[7px] z-20 text-[#9d9775] text-xl leading-none rotate-180">
+        ❧
+      </span>
+      <span className="absolute bottom-[7px] right-[7px] z-20 text-[#9d9775] text-xl leading-none rotate-180 scale-x-[-1]">
+        ❧
+      </span>
 
-      {/* Decoración superior */}
+      {/* Rama superior izquierda */}
       <img
         src="../img/branch-top.png"
         alt=""
-        className="absolute top-0 left-0 w-[75%] md:w-[55%] lg:w-[45%] select-none pointer-events-none"
+        aria-hidden="true"
+        className="
+          absolute top-0 left-0 z-10
+          w-[82%] max-w-[430px]
+          sm:w-[60%] sm:max-w-[520px]
+          object-contain object-left-top
+          select-none pointer-events-none
+        "
       />
 
-      {/* Decoración lateral */}
+      {/* Rama lateral izquierda */}
       <img
         src="../img/branch-left.png"
         alt=""
-        className="absolute left-0 top-0 h-full w-auto max-w-[170px] md:max-w-[220px] select-none pointer-events-none"
+        aria-hidden="true"
+        className="
+          absolute top-0 left-0 z-[9]
+          h-full w-auto
+          max-w-[115px]
+          sm:max-w-[155px]
+          md:max-w-[190px]
+          object-cover object-left
+          select-none pointer-events-none
+        "
       />
 
-      {/* Contenido */}
-      <div className="relative z-10 flex flex-col items-center px-6 pt-24 pb-16">
+      {/* Contenido principal */}
+      <div
+        className="
+          relative z-10
+          flex min-h-screen flex-col items-center
+          px-9 sm:px-12
+          pt-20 sm:pt-24
+          pb-8
+        "
+      >
+        {/* Logo */}
+        <img
+          src="../img/logo.png"
+          alt="Logo de Katherine y Aidan"
+          className="
+            mt-1
+            w-[88px]
+            sm:w-[108px]
+            md:w-[120px]
+            h-auto object-contain
+          "
+        />
 
-<div className="relative w-32 h-32 md:w-40 md:h-40 flex items-center justify-center">
-    <img
-        src="../img/monogram.svg"
-        alt="Monograma"
-        className="w-full h-full"
-    />
+        {/* Introducción */}
+        <div className="mt-10 sm:mt-12 text-center text-[#5d5a52]">
+          <p
+            className="
+              uppercase
+              text-[7px] sm:text-[9px]
+              tracking-[0.14em]
+              leading-relaxed
+            "
+          >
+            Tenemos el placer de
+          </p>
 
-    <span
-        className="absolute text-[#6f6b4d] pointer-events-none select-none"
-        style={{
-            fontFamily: "Allura",
-            fontSize: "3rem",
-            left: "44%",
-            top: "47%",
-            transform: "translate(-50%, -50%)",
-            lineHeight: 1,
-            zIndex: 2
-        }}
-    >
-        K
-    </span>
-
-    <span
-        className="absolute text-[#6f6b4d] pointer-events-none select-none"
-        style={{
-            fontFamily: "Allura",
-            fontSize: "3rem",
-            left: "56%",
-            top: "53%",
-            transform: "translate(-50%, -50%)",
-            lineHeight: 1,
-            zIndex: 3
-        }}
-    >
-        A
-    </span>
-</div>
-
-        {/* Texto */}
-        <p className="mt-12 text-center uppercase tracking-[4px] text-[#555] text-xs md:text-sm">
-          Tenemos el placer de
-        </p>
-
-        <p className="mt-2 text-center uppercase tracking-[4px] text-[#555] text-xs md:text-sm">
-          Invitaros a nuestro enlace
-        </p>
-
-        {/* Nombres */}
-        <h1
-          className="mt-10 text-center text-[#555238]"
-          style={{
-            fontFamily: "Allura",
-            fontSize: "clamp(3.2rem,8vw,6rem)"
-          }}
-        >
-          Katherine E. Palomo
-        </h1>
-
-        <div
-          className="my-2 text-[#555238]"
-          style={{
-            fontFamily: "Allura",
-            fontSize: "clamp(2.5rem,6vw,4rem)"
-          }}
-        >
-          y
+          <p
+            className="
+              mt-1 uppercase
+              text-[7px] sm:text-[9px]
+              tracking-[0.14em]
+              leading-relaxed
+            "
+          >
+            Invitaros a nuestro enlace
+          </p>
         </div>
 
-        <h1
-          className="text-center text-[#555238]"
-          style={{
-            fontFamily: "Allura",
-            fontSize: "clamp(3.2rem,8vw,6rem)"
-          }}
-        >
-          Aidan Verdejo
-        </h1>
+        {/* Nombres */}
+        <div className="mt-5 sm:mt-7 flex flex-col items-center text-[#6d694b]">
+          <h1
+            className="text-center font-normal leading-[0.95]"
+            style={{
+              fontFamily: "'Allura', cursive",
+              fontSize: "clamp(2.5rem, 9vw, 4.7rem)",
+            }}
+          >
+            Katherine E. Palomo
+          </h1>
 
-        {/* Separador */}
-        <img
-          src="../img/divider.png"
-          alt=""
-          className="mt-10 w-48"
-        />
+          <span
+            className="my-1 sm:my-2 leading-none"
+            style={{
+              fontFamily: "'Allura', cursive",
+              fontSize: "clamp(1.7rem, 5vw, 2.8rem)",
+            }}
+          >
+            y
+          </span>
+
+          <h1
+            className="text-center font-normal leading-[0.95]"
+            style={{
+              fontFamily: "'Allura', cursive",
+              fontSize: "clamp(2.5rem, 9vw, 4.7rem)",
+            }}
+          >
+            Aidan Verdejo
+          </h1>
+        </div>
+
+        {/* Separador ornamental */}
+        <div className="mt-5 flex items-center justify-center text-[#827b59]">
+          <span className="block h-px w-9 bg-[#aaa27c]" />
+          <span className="mx-2 text-[11px]">◇</span>
+          <span className="block h-px w-9 bg-[#aaa27c]" />
+        </div>
 
         {/* Fecha */}
-        <h3 className="mt-8 tracking-[3px] uppercase text-[#555] text-sm md:text-lg">
+        <p
+          className="
+            mt-4 sm:mt-5
+            text-center uppercase
+            text-[7px] sm:text-[9px]
+            tracking-[0.17em]
+            text-[#5c5a52]
+          "
+        >
           13 de Septiembre de 2026
-        </h3>
+        </p>
 
         {/* Masía */}
-        <img
-          src="../img/background-head.png"
-          alt="Masía"
-          className="mt-10 w-full max-w-5xl object-contain"
-        />
+        <div className="relative mt-3 sm:mt-5 w-[calc(100%+4.5rem)] sm:w-[calc(100%+6rem)]">
+          <img
+            src="../img/masia-introduction.png"
+            alt="Masía de Sant Antoni"
+            className="
+              mx-auto
+              w-full max-w-[700px]
+              h-auto object-contain
+              select-none
+            "
+          />
+        </div>
 
-        {/* Sello */}
+        {/* Sello superpuesto */}
         <img
-          src="../img/wax.png"
-          alt=""
-          className="w-28 md:w-36 -mt-12 drop-shadow-xl"
+          src="../img/sello.png"
+          alt="Sello de la invitación"
+          className="
+            relative z-20
+            -mt-8 sm:-mt-12
+            w-[76px] sm:w-[96px] md:w-[108px]
+            h-auto object-contain
+            drop-shadow-[0_5px_5px_rgba(64,48,24,0.24)]
+          "
         />
 
         {/* Texto inferior */}
-        <h3
-          className="mt-10 text-[#6b6547]"
+        <p
+          className="mt-5 sm:mt-7 text-center text-[#706c50] leading-none"
           style={{
-            fontFamily: "Allura",
-            fontSize: "clamp(2rem,4vw,3rem)"
+            fontFamily: "'Allura', cursive",
+            fontSize: "clamp(1.25rem, 4vw, 2rem)",
           }}
         >
           Desliza para descubrir
-        </h3>
+        </p>
 
         {/* Flecha */}
         <svg
-          className="mt-4 animate-bounce"
-          width="30"
-          height="30"
+          className="mt-3 h-4 w-4 animate-bounce"
           viewBox="0 0 24 24"
           fill="none"
+          aria-hidden="true"
         >
           <path
-            d="M6 9l6 6 6-6"
-            stroke="#5f5b43"
-            strokeWidth="2"
+            d="M7 10l5 5 5-5"
+            stroke="#777155"
+            strokeWidth="1.3"
             strokeLinecap="round"
             strokeLinejoin="round"
           />
         </svg>
-
       </div>
-
     </section>
   );
 };
