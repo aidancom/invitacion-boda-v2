@@ -11,7 +11,7 @@ const Location = () => {
                 className="absolute inset-0 w-full h-full pointer-events-none select-none"
             />
 
-            <div className="relative z-10 max-w-4xl mx-auto flex flex-col items-center text-center">
+            <div className="relative z-10 max-w-4xl mx-auto flex flex-col items-center text-center my-[25px]">
 
                 {/* Icono */}
                 <MapPinIcon
