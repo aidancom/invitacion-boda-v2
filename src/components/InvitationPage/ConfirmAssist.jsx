@@ -56,45 +56,168 @@ const ConfirmAssist = () => {
     });
   };
 
-  return (
-    <section className="relative w-full overflow-hidden bg-[#f8f0e3] px-4 py-5 sm:px-7 sm:py-8">
-      {/* Marco y flores */}
-      <img
-        src="../img/confirm-frame-flowers.png"
-        alt=""
-        aria-hidden="true"
-        className="
-          absolute
-          inset-0
-          z-0
-          h-full
-          w-full
-          object-fill
-          pointer-events-none
-          select-none
-        "
-      />
+return (
+  <section
+    className="
+      relative
+      w-full
+      overflow-hidden
+      bg-[#f8f0e3]
+      px-4
+      py-5
+      sm:px-7
+      sm:py-8
+    "
+  >
+{/* Marco */}
+<div
+  aria-hidden="true"
+  className="
+    pointer-events-none
+    absolute
+    inset-[12px]
+    z-[20]
+    border
+    border-[#b89a54]
+    sm:inset-[18px]
+  "
+/>
+    {/* Detalles de las esquinas */}
+    <span
+      aria-hidden="true"
+      className="
+        pointer-events-none
+        absolute
+        left-[7px]
+        top-[2px]
+        z-[6]
+        text-[22px]
+        text-[#b89a54]
+        sm:left-[12px]
+        sm:top-[7px]
+      "
+    >
+      ❧
+    </span>
 
-      {/* Contenido */}
-      <div
-        className="
-          relative
-          z-10
-          mx-auto
-          flex
-          w-full
-          max-w-[900px]
-          flex-col
-          items-center
-          px-5
-          pb-14
-          pt-14
-          sm:px-12
-          sm:pb-20
-          sm:pt-16
-          md:px-20
-        "
-      >
+    <span
+      aria-hidden="true"
+      className="
+        pointer-events-none
+        absolute
+        right-[7px]
+        top-[2px]
+        z-[6]
+        scale-x-[-1]
+        text-[22px]
+        text-[#b89a54]
+        sm:right-[12px]
+        sm:top-[7px]
+      "
+    >
+      ❧
+    </span>
+
+    <span
+      aria-hidden="true"
+      className="
+        pointer-events-none
+        absolute
+        bottom-[2px]
+        left-[7px]
+        z-[6]
+        rotate-180
+        text-[22px]
+        text-[#b89a54]
+        sm:bottom-[7px]
+        sm:left-[12px]
+      "
+    >
+      ❧
+    </span>
+
+    <span
+      aria-hidden="true"
+      className="
+        pointer-events-none
+        absolute
+        bottom-[2px]
+        right-[7px]
+        z-[6]
+        rotate-180
+        scale-x-[-1]
+        text-[22px]
+        text-[#b89a54]
+        sm:bottom-[7px]
+        sm:right-[12px]
+      "
+    >
+      ❧
+    </span>
+
+   {/* Rama superior derecha */}
+<img
+  src="../img/branch-top-confirm.png"
+  alt=""
+  aria-hidden="true"
+  className="
+    pointer-events-none
+    absolute
+    right-[8px]
+    top-[40px]
+    z-[6]
+    w-[125px]
+    select-none
+    object-contain
+    sm:right-[14px]
+    sm:top-[48px]
+    sm:w-[170px]
+    md:w-[210px]
+  "
+/>
+
+{/* Rama inferior izquierda */}
+<img
+  src="../img/branch-top-confirm.png"
+  alt=""
+  aria-hidden="true"
+  className="
+    pointer-events-none
+    absolute
+    bottom-[-15px]
+    left-[8px]
+    z-[6]
+    w-[135px]
+    rotate-180
+    select-none
+    object-contain
+    sm:bottom-[52px]
+    sm:left-[14px]
+    sm:w-[180px]
+    md:w-[220px]
+  "
+/>
+
+    {/* Contenido */}
+    <div
+      className="
+        relative
+        z-10
+        mx-auto
+        flex
+        w-full
+        max-w-[900px]
+        flex-col
+        items-center
+        px-5
+        pb-14
+        pt-14
+        sm:px-12
+        sm:pb-20
+        sm:pt-16
+        md:px-20
+      "
+    >
         {/* Adorno superior */}
         <div className="flex items-center justify-center text-[#b5974e]">
           <span className="h-px w-12 bg-[#b5974e] sm:w-20" />
