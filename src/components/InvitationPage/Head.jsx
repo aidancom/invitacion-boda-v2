@@ -87,7 +87,7 @@ const Head = () => {
 
         {/* Fecha */}
         <p className="mt-3 text-center uppercase text-[6px] sm:text-[8px] tracking-[0.15em] text-[#5c5a52]">
-          13 de Septiembre de 2026
+          11 de Septiembre de 2026
         </p>
 
         {/* Masía + sello superpuesto */}
