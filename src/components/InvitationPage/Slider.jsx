@@ -1,6 +1,6 @@
 const events = [
     {
-        time: "19:16",
+        time: "19:15",
         title: "CEREMONIA",
         image: "../img/rings.webp"
     },
