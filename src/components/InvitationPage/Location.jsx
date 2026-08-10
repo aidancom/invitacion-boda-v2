@@ -66,7 +66,7 @@ const Location = () => {
                     <br />
                     en la Masía San Antonio de Benifaió,
                     <br />
-                    a las <strong>19:30 pm.</strong>
+                    a las <strong>19:15 pm.</strong>
                 </p>
 
                 {/* Botón */}
