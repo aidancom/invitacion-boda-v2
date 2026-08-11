@@ -40,8 +40,8 @@ export default function Chronometer() {
 
   const handleClick = () => {
     const title = "Boda Aidan y Katherine";
-    const location = "Betera";
-    const start = "20260911T193000";
+    const location = "Benifaio";
+    const start = "20260911T191500";
     const end = "20260912T030000";
 
     const url =
