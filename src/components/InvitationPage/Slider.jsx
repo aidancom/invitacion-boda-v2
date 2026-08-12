@@ -5,7 +5,7 @@ const events = [
         image: "../img/rings.webp"
     },
     {
-        time: "19:46",
+        time: "19:45",
         title: "CÓCTEL",
         image: "../img/cocktail.webp"
     },
